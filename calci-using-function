@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+int add(int a, int b);
+int sub(int c, int d);
+int mul(int e, int f);
+int div(int g, int h);
+
+int main()
+{
+  int a=5,b=10;
+  int addi, subt, mult, divi;
+  int operator;
+  addi = add(a, b);
+  subt = sub(a, b);
+  mult = mul(a, b);
+  divi = div(a, b);
+  
+  printf("Enter 1 for addition :\n");
+  printf("Enter 2 for subtration :\n");
+  printf("Enter 3 for multiplication :\n");
+  printf("Enter 4 for division :\n");
+  printf("Enter 5 for exit\n");
+
+  vijay:
+  printf("Enter operator:");
+  scanf("%d", &operator);
+
+  switch(operator)
+  {
+      case 1:
+        printf("%d\n", addi);
+        goto vijay;
+        break;
+     
+      case 2:
+        printf("%d\n", subt);
+        goto vijay;
+        break;
+       
+      case 3:
+        printf("%d\n", mult);
+        goto vijay;
+        break;
+      case 4:
+        printf("%d\n",divi);
+        goto vijay;
+        break;
+      case 5: 
+        return 0; 
+      default:
+        printf("Please Enter Correct operator:");  
+
+  }
+
+  return 0;
+
+
+
+}
+
+int add(int a, int b)
+{
+  int addition;
+  addition = a + b;
+  return addition;
+}
+
+int sub(int c, int d)
+{
+  int subtraction;
+  subtraction = c - d;
+  return subtraction;
+}
+
+int mul(int e, int f)
+{
+  int multiplication;
+  multiplication = e * f;
+  return multiplication;
+}
+
+int div(int g, int h)
+{
+  int division;
+  division = g / h;
+  return division;
+}  
